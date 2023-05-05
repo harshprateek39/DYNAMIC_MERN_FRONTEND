@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+.App{display: flex; flex-direction: column; align-items: center; width: 100%; min-height: 100vh;}
+*::-webkit-scrollbar {
+  width: 10px;
+  width: 10px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #DFE9EB;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*::-webkit-scrollbar-track:hover {
+  background-color: #B8C0C2;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+*::-webkit-scrollbar-track:active {
+  background-color: #B8C0C2;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #095075;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #20ABAC;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #62A34B;
+}
+.nav{
+  display: flex; height: 30px; width: 90vw; 
+  flex-direction: row; justify-content: space-between; 
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin:20px 20px;
+  background-color: rgba(255, 255, 255, 0);
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.navLinks{ display: flex; flex-direction: row;
+   justify-content: space-between; gap: 2rem; align-items: center;
+   font-weight: 300; text-decoration: none;
+   color: white;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
+  .linkchanger{color: white; text-decoration: none; font-weight: 400;}
+  .navBrand{color: white; font-weight: 500;}
+  .navBtn{background-color: blue; color: white; height: 30px; outline: none; 
+    border-style: none; border-radius: 30px;
+     cursor: pointer; padding: 5px; font-size: 10px;
+      width: 80px;
+    }
+  
+   
+
+  /* home */
+
+  .home{color: white; display: flex; flex-direction: column; align-items: center; width: 95vw;}
+
+  .contact-card{height: 80vh;  /* From https://css.glass */
+    background: rgba(64, 157, 238, 0.17);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.5px);
+    -webkit-backdrop-filter: blur(2.5px);
+    border: 1px solid rgba(64, 157, 238, 0.01); color: white; width: 80vw; display: flex; justify-content: center;}
+
+    .home-content-item{ /* From https://css.glass */
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(3.1px);
+      -webkit-backdrop-filter: blur(3.1px); gap: 2rem;}
+    .toggle{background-color: rgba(240, 255, 255, 0); color: white; border-style: none; font-size: 30px; cursor: pointer; }
+    .navPannel{background-color: black; height: 90%; width: 250px; position: fixed;right: 0px; display: flex;
+       flex-direction: column; 
+       align-items: center; padding-right: 30px; padding-top: 50px; gap: 4rem;
+       border-radius: 20px;
+       transition: ease-out 0.5s; z-index: 2; right: -500px;
+      }
+      .contact-card{display: flex; flex-direction: column; 
+        justify-content: flex-start; align-items: center;
+      padding: 50px; gap:3rem}
+      .form{display: flex; flex-direction: column; 
+        align-items: center; gap: 2rem; width: 80%; }
+      .lable{display: flex; justify-content:
+         space-between; gap: 1rem;}
+    .contactBtn{ background-color: rgb(7, 47, 39); border-style: none; border-radius: 20px; width: 150px; color: white; height: 35px; cursor: pointer;}
+    .contactInput{background-color: rgb(196, 221, 226); outline: none; border-style: none; border-radius: 10px; padding-left: 20px;}
+      .footer{margin-top: auto; /* Push the footer to the bottom of the container */
+        background-color: #05050579;
+        padding: 10px; display: flex; 
+        justify-content: space-between; color:white; align-items: center; gap: 1rem;
+        width: 100%;}
+        .right{display: flex; justify-content: space-between; gap: 1rem;}
+        .home-content-item{ display: flex ; align-items: center; gap: 3rem ;justify-content: space-between; padding: 20px;}
+    .left{display: flex; flex-direction: column; font-size: 10px; gap: 1rem;}
+       .home-content{gap: 1rem; display: flex; flex-direction: column;}
+        .home-images{height: 200px; width: 250px; border-radius: 10px; margin: 20px;}
+.priceImg{width: 95%; height: 300px; border-radius: 5px;}
+.features{display: grid; grid-template-columns: 1fr 1fr 1fr ; grid-template-rows: 1fr; gap: 2rem; padding: 20px;}
+
+        @media (max-width: 800px) {
+          .home-content-item{ display: flex ; flex-direction: column; align-items: center; gap:3rem ;justify-content: space-between;
+          }
+          .features{display: flex; justify-content: space-between; gap: 2rem; align-items: center; flex-direction: column;}
+          .Copyright{font-size: 9px;}
+          .left{font-size: 9px;}
+        }
