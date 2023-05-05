@@ -12,6 +12,10 @@ const Contact = () => {
     const detail={userName:name,UserEmail:email,Message:message}
      console.log(detail);
      const res= await axios.post("https://dynamic-web-api.vercel.app/message",detail);
+     alert("Sent!");
+     setName("");
+     setEmail("");
+     setMessage("");
    console.log(res.data);
   };
   return (
